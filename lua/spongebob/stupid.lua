@@ -7,8 +7,7 @@ function M.format (s, e)
   local bufnr = vim.api.nvim_get_current_buf()
 
   local str = vim.api.nvim_buf_get_lines(bufnr, s-1, e, true)
-  str = "foo"
-  new_str = ""
+  local new_str = ""
   for i = 1, #str do
       local c = str:sub(i,i)
       if str:find(c)%1 == 1 then
